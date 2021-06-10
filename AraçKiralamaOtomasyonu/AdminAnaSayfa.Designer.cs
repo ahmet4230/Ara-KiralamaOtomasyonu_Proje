@@ -37,6 +37,7 @@ namespace AraçKiralamaOtomasyonu
             this.MusterılerBtn = new System.Windows.Forms.Button();
             this.CıkısBtn = new System.Windows.Forms.Button();
             this.MusteriEklemeBtn = new System.Windows.Forms.Button();
+            this.FirmaBilgileriBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // AraclarBtn1
@@ -56,8 +57,6 @@ namespace AraçKiralamaOtomasyonu
             this.AraclarBtn1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.AraclarBtn1.UseVisualStyleBackColor = false;
             this.AraclarBtn1.Click += new System.EventHandler(this.AraclarBtn1_Click);
-            this.AraclarBtn1.MouseLeave += new System.EventHandler(this.AraclarBtn1_MouseLeave);
-            this.AraclarBtn1.MouseHover += new System.EventHandler(this.AraclarBtn1_MouseHover);
             // 
             // ımageList1
             // 
@@ -75,6 +74,7 @@ namespace AraçKiralamaOtomasyonu
             this.ımageList1.Images.SetKeyName(9, "indir (7).png");
             this.ımageList1.Images.SetKeyName(10, "indir (4).png");
             this.ımageList1.Images.SetKeyName(11, "indir (4) (1).png");
+            this.ımageList1.Images.SetKeyName(12, "indir (2) (1).png");
             // 
             // KullanıcılarBtn
             // 
@@ -93,8 +93,6 @@ namespace AraçKiralamaOtomasyonu
             this.KullanıcılarBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.KullanıcılarBtn.UseVisualStyleBackColor = false;
             this.KullanıcılarBtn.Click += new System.EventHandler(this.KullanıcılarBtn_Click);
-            this.KullanıcılarBtn.MouseLeave += new System.EventHandler(this.KullanıcılarBtn_MouseLeave);
-            this.KullanıcılarBtn.MouseHover += new System.EventHandler(this.KullanıcılarBtn_MouseHover);
             // 
             // MusterılerBtn
             // 
@@ -112,8 +110,6 @@ namespace AraçKiralamaOtomasyonu
             this.MusterılerBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.MusterılerBtn.UseVisualStyleBackColor = false;
             this.MusterılerBtn.Click += new System.EventHandler(this.MusterılerBtn_Click);
-            this.MusterılerBtn.MouseLeave += new System.EventHandler(this.MusterılerBtn_MouseLeave);
-            this.MusterılerBtn.MouseHover += new System.EventHandler(this.MusterılerBtn_MouseHover);
             // 
             // CıkısBtn
             // 
@@ -132,8 +128,6 @@ namespace AraçKiralamaOtomasyonu
             this.CıkısBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.CıkısBtn.UseVisualStyleBackColor = false;
             this.CıkısBtn.Click += new System.EventHandler(this.CıkısBtn_Click_1);
-            this.CıkısBtn.MouseLeave += new System.EventHandler(this.CıkısBtn_MouseLeave);
-            this.CıkısBtn.MouseHover += new System.EventHandler(this.CıkısBtn_MouseHover);
             // 
             // MusteriEklemeBtn
             // 
@@ -151,8 +145,23 @@ namespace AraçKiralamaOtomasyonu
             this.MusteriEklemeBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.MusteriEklemeBtn.UseVisualStyleBackColor = false;
             this.MusteriEklemeBtn.Click += new System.EventHandler(this.MusteriEklemeBtn_Click);
-            this.MusteriEklemeBtn.MouseLeave += new System.EventHandler(this.MusteriEklemeBtn_MouseLeave);
-            this.MusteriEklemeBtn.MouseHover += new System.EventHandler(this.MusteriEklemeBtn_MouseHover);
+            // 
+            // FirmaBilgileriBtn
+            // 
+            this.FirmaBilgileriBtn.BackColor = System.Drawing.Color.Transparent;
+            this.FirmaBilgileriBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("FirmaBilgileriBtn.BackgroundImage")));
+            this.FirmaBilgileriBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.FirmaBilgileriBtn.ForeColor = System.Drawing.Color.Transparent;
+            this.FirmaBilgileriBtn.ImageIndex = 12;
+            this.FirmaBilgileriBtn.ImageList = this.ımageList1;
+            this.FirmaBilgileriBtn.Location = new System.Drawing.Point(242, 253);
+            this.FirmaBilgileriBtn.Name = "FirmaBilgileriBtn";
+            this.FirmaBilgileriBtn.Size = new System.Drawing.Size(211, 149);
+            this.FirmaBilgileriBtn.TabIndex = 4;
+            this.FirmaBilgileriBtn.Text = "FİRMA BİLGİLERİ";
+            this.FirmaBilgileriBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.FirmaBilgileriBtn.UseVisualStyleBackColor = false;
+            this.FirmaBilgileriBtn.Click += new System.EventHandler(this.FirmaBilgileriBtn_Click);
             // 
             // AdminAnaSayfa
             // 
@@ -163,6 +172,7 @@ namespace AraçKiralamaOtomasyonu
             this.BackgroundImage = global::AraçKiralamaOtomasyonu.Properties.Resources.pexels_photo_1685111;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(982, 542);
+            this.Controls.Add(this.FirmaBilgileriBtn);
             this.Controls.Add(this.MusteriEklemeBtn);
             this.Controls.Add(this.CıkısBtn);
             this.Controls.Add(this.MusterılerBtn);
@@ -173,7 +183,6 @@ namespace AraçKiralamaOtomasyonu
             this.Name = "AdminAnaSayfa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ana Sayfa";
-            this.Load += new System.EventHandler(this.BaslangıcForm_Load);
             this.ResumeLayout(false);
 
         }
@@ -186,5 +195,6 @@ namespace AraçKiralamaOtomasyonu
         private System.Windows.Forms.Button CıkısBtn;
         private System.Windows.Forms.Button MusteriEklemeBtn;
         private System.Windows.Forms.ImageList ımageList1;
+        private System.Windows.Forms.Button FirmaBilgileriBtn;
     }
 }

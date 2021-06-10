@@ -48,7 +48,6 @@ namespace AraçKiralamaOtomasyonu
             this.MarkaListele = new System.Windows.Forms.Button();
             this.ModelSayısıLbl = new System.Windows.Forms.Label();
             this.ModelSayıTxt = new System.Windows.Forms.TextBox();
-            this.PazarlananYerTxt = new System.Windows.Forms.TextBox();
             this.PazarlananYerNo = new System.Windows.Forms.Label();
             this.MarkaİsimTxt = new System.Windows.Forms.TextBox();
             this.MarkaİsmiLbl = new System.Windows.Forms.Label();
@@ -67,6 +66,7 @@ namespace AraçKiralamaOtomasyonu
             this.button1 = new System.Windows.Forms.Button();
             this.MarkaBilgileriGuncelleBtn = new System.Windows.Forms.Button();
             this.MarkaLbl = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.AracBilgileri.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -80,9 +80,9 @@ namespace AraçKiralamaOtomasyonu
             this.GünlükFiyatLbl.ForeColor = System.Drawing.Color.White;
             this.GünlükFiyatLbl.Location = new System.Drawing.Point(875, 249);
             this.GünlükFiyatLbl.Name = "GünlükFiyatLbl";
-            this.GünlükFiyatLbl.Size = new System.Drawing.Size(142, 24);
+            this.GünlükFiyatLbl.Size = new System.Drawing.Size(144, 24);
             this.GünlükFiyatLbl.TabIndex = 1;
-            this.GünlükFiyatLbl.Text = "GÜBLÜK FİYAT";
+            this.GünlükFiyatLbl.Text = "GÜNLÜK FİYAT";
             // 
             // label1
             // 
@@ -153,21 +153,21 @@ namespace AraçKiralamaOtomasyonu
             // 
             // PlakaTxt
             // 
-            this.PlakaTxt.Location = new System.Drawing.Point(1084, 137);
+            this.PlakaTxt.Location = new System.Drawing.Point(1084, 141);
             this.PlakaTxt.Name = "PlakaTxt";
             this.PlakaTxt.Size = new System.Drawing.Size(155, 30);
             this.PlakaTxt.TabIndex = 8;
             // 
             // RenkTxt
             // 
-            this.RenkTxt.Location = new System.Drawing.Point(1084, 184);
+            this.RenkTxt.Location = new System.Drawing.Point(1084, 190);
             this.RenkTxt.Name = "RenkTxt";
             this.RenkTxt.Size = new System.Drawing.Size(155, 30);
             this.RenkTxt.TabIndex = 9;
             // 
             // HakkındaTxt
             // 
-            this.HakkındaTxt.Location = new System.Drawing.Point(1036, 278);
+            this.HakkındaTxt.Location = new System.Drawing.Point(1036, 288);
             this.HakkındaTxt.Multiline = true;
             this.HakkındaTxt.Name = "HakkındaTxt";
             this.HakkındaTxt.Size = new System.Drawing.Size(203, 42);
@@ -199,7 +199,7 @@ namespace AraçKiralamaOtomasyonu
             // 
             // GunlukFiyatTxt
             // 
-            this.GunlukFiyatTxt.Location = new System.Drawing.Point(1084, 231);
+            this.GunlukFiyatTxt.Location = new System.Drawing.Point(1084, 239);
             this.GunlukFiyatTxt.Name = "GunlukFiyatTxt";
             this.GunlukFiyatTxt.Size = new System.Drawing.Size(155, 30);
             this.GunlukFiyatTxt.TabIndex = 10;
@@ -207,11 +207,11 @@ namespace AraçKiralamaOtomasyonu
             // AracBilgileri
             // 
             this.AracBilgileri.BackColor = System.Drawing.Color.Transparent;
+            this.AracBilgileri.Controls.Add(this.comboBox1);
             this.AracBilgileri.Controls.Add(this.dataGridView2);
             this.AracBilgileri.Controls.Add(this.MarkaListele);
             this.AracBilgileri.Controls.Add(this.ModelSayısıLbl);
             this.AracBilgileri.Controls.Add(this.ModelSayıTxt);
-            this.AracBilgileri.Controls.Add(this.PazarlananYerTxt);
             this.AracBilgileri.Controls.Add(this.PazarlananYerNo);
             this.AracBilgileri.Controls.Add(this.MarkaİsimTxt);
             this.AracBilgileri.Controls.Add(this.MarkaİsmiLbl);
@@ -251,7 +251,6 @@ namespace AraçKiralamaOtomasyonu
             this.AracBilgileri.TabIndex = 3;
             this.AracBilgileri.TabStop = false;
             this.AracBilgileri.Text = "Araç Bilgileri";
-            this.AracBilgileri.Enter += new System.EventHandler(this.AracBilgileri_Enter);
             // 
             // dataGridView2
             // 
@@ -274,7 +273,7 @@ namespace AraçKiralamaOtomasyonu
             this.MarkaListele.ForeColor = System.Drawing.Color.Black;
             this.MarkaListele.Location = new System.Drawing.Point(321, 291);
             this.MarkaListele.Name = "MarkaListele";
-            this.MarkaListele.Size = new System.Drawing.Size(260, 72);
+            this.MarkaListele.Size = new System.Drawing.Size(237, 72);
             this.MarkaListele.TabIndex = 42;
             this.MarkaListele.Text = "MARKA LİSTELE";
             this.MarkaListele.UseVisualStyleBackColor = false;
@@ -299,24 +298,17 @@ namespace AraçKiralamaOtomasyonu
             this.ModelSayıTxt.Size = new System.Drawing.Size(155, 30);
             this.ModelSayıTxt.TabIndex = 39;
             // 
-            // PazarlananYerTxt
-            // 
-            this.PazarlananYerTxt.Location = new System.Drawing.Point(188, 111);
-            this.PazarlananYerTxt.Name = "PazarlananYerTxt";
-            this.PazarlananYerTxt.Size = new System.Drawing.Size(155, 30);
-            this.PazarlananYerTxt.TabIndex = 38;
-            // 
             // PazarlananYerNo
             // 
             this.PazarlananYerNo.AutoSize = true;
             this.PazarlananYerNo.BackColor = System.Drawing.Color.Transparent;
-            this.PazarlananYerNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.PazarlananYerNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.PazarlananYerNo.ForeColor = System.Drawing.Color.White;
             this.PazarlananYerNo.Location = new System.Drawing.Point(10, 119);
             this.PazarlananYerNo.Name = "PazarlananYerNo";
-            this.PazarlananYerNo.Size = new System.Drawing.Size(165, 18);
+            this.PazarlananYerNo.Size = new System.Drawing.Size(108, 25);
             this.PazarlananYerNo.TabIndex = 40;
-            this.PazarlananYerNo.Text = "PAZARLANAN YER NO";
+            this.PazarlananYerNo.Text = "FİRMA NO";
             // 
             // MarkaİsimTxt
             // 
@@ -339,7 +331,7 @@ namespace AraçKiralamaOtomasyonu
             // 
             // ModelYılıTxt
             // 
-            this.ModelYılıTxt.Location = new System.Drawing.Point(1084, 351);
+            this.ModelYılıTxt.Location = new System.Drawing.Point(1084, 349);
             this.ModelYılıTxt.Name = "ModelYılıTxt";
             this.ModelYılıTxt.Size = new System.Drawing.Size(155, 30);
             this.ModelYılıTxt.TabIndex = 12;
@@ -359,7 +351,7 @@ namespace AraçKiralamaOtomasyonu
             // 
             // MarkalNotxt
             // 
-            this.MarkalNotxt.Location = new System.Drawing.Point(1084, 90);
+            this.MarkalNotxt.Location = new System.Drawing.Point(1084, 92);
             this.MarkalNotxt.Name = "MarkalNotxt";
             this.MarkalNotxt.Size = new System.Drawing.Size(155, 30);
             this.MarkalNotxt.TabIndex = 7;
@@ -402,7 +394,6 @@ namespace AraçKiralamaOtomasyonu
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1243, 292);
             this.dataGridView1.TabIndex = 22;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellEnter);
             // 
             // button2
@@ -424,7 +415,7 @@ namespace AraçKiralamaOtomasyonu
             this.MarkaEkleBtn.ForeColor = System.Drawing.Color.Black;
             this.MarkaEkleBtn.Location = new System.Drawing.Point(14, 291);
             this.MarkaEkleBtn.Name = "MarkaEkleBtn";
-            this.MarkaEkleBtn.Size = new System.Drawing.Size(277, 72);
+            this.MarkaEkleBtn.Size = new System.Drawing.Size(264, 72);
             this.MarkaEkleBtn.TabIndex = 4;
             this.MarkaEkleBtn.Text = "MARKA BİLGİLERİ EKLE";
             this.MarkaEkleBtn.UseVisualStyleBackColor = false;
@@ -467,7 +458,6 @@ namespace AraçKiralamaOtomasyonu
             this.PazarlananYerNoLbl.Size = new System.Drawing.Size(214, 24);
             this.PazarlananYerNoLbl.TabIndex = 16;
             this.PazarlananYerNoLbl.Text = "PAZARLANAN YER NO";
-            this.PazarlananYerNoLbl.Click += new System.EventHandler(this.PazarlananYerNoLbl_Click);
             // 
             // button1
             // 
@@ -506,6 +496,18 @@ namespace AraçKiralamaOtomasyonu
             this.MarkaLbl.TabIndex = 1;
             this.MarkaLbl.Text = "MARKA İSMİ";
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3"});
+            this.comboBox1.Location = new System.Drawing.Point(188, 116);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(155, 33);
+            this.comboBox1.TabIndex = 44;
+            // 
             // AracForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -522,7 +524,6 @@ namespace AraçKiralamaOtomasyonu
             this.Name = "AracForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "AracForm";
-            this.Load += new System.EventHandler(this.AracForm_Load);
             this.AracBilgileri.ResumeLayout(false);
             this.AracBilgileri.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
@@ -562,12 +563,12 @@ namespace AraçKiralamaOtomasyonu
         private System.Windows.Forms.Label MarkaLbl;
         private System.Windows.Forms.Label ModelSayısıLbl;
         private System.Windows.Forms.TextBox ModelSayıTxt;
-        private System.Windows.Forms.TextBox PazarlananYerTxt;
         private System.Windows.Forms.Label PazarlananYerNo;
         private System.Windows.Forms.TextBox MarkaİsimTxt;
         private System.Windows.Forms.Label MarkaİsmiLbl;
         private System.Windows.Forms.Button MarkaListele;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Button MarkaBilgileriGuncelleBtn;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

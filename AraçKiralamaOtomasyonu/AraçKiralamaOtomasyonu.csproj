@@ -51,6 +51,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Arac_Kiralama_Final1DataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FirmaBilgileri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FirmaBilgileri.Designer.cs">
+      <DependentUpon>FirmaBilgileri.cs</DependentUpon>
+    </Compile>
     <Compile Include="KullanıcıAnaSayfa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +119,9 @@
     <Compile Include="YetkiliKişi.Designer.cs">
       <DependentUpon>YetkiliKişi.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FirmaBilgileri.resx">
+      <DependentUpon>FirmaBilgileri.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="KullanıcıAnaSayfa.resx">
       <DependentUpon>KullanıcıAnaSayfa.cs</DependentUpon>
     </EmbeddedResource>

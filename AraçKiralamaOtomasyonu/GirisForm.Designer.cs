@@ -29,6 +29,7 @@ namespace AraçKiralamaOtomasyonu
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GirisForm));
             this.kullanıcıŞifreTxt = new System.Windows.Forms.TextBox();
             this.kullanıcıSifreLbl = new System.Windows.Forms.Label();
@@ -43,6 +44,8 @@ namespace AraçKiralamaOtomasyonu
             this.KayıtBtn = new System.Windows.Forms.Button();
             this.GirisYapBtn = new System.Windows.Forms.Button();
             this.GirisYap2 = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // kullanıcıŞifreTxt
@@ -53,6 +56,7 @@ namespace AraçKiralamaOtomasyonu
             this.kullanıcıŞifreTxt.PasswordChar = '*';
             this.kullanıcıŞifreTxt.Size = new System.Drawing.Size(225, 34);
             this.kullanıcıŞifreTxt.TabIndex = 2;
+            this.toolTip1.SetToolTip(this.kullanıcıŞifreTxt, "LÜTFEN SİSTEM KAYITLI OLAN KULLANICI İSMİNİZİ ŞİFRENİZİ");
             // 
             // kullanıcıSifreLbl
             // 
@@ -85,6 +89,7 @@ namespace AraçKiralamaOtomasyonu
             this.kullanıcıİsimTxt.Name = "kullanıcıİsimTxt";
             this.kullanıcıİsimTxt.Size = new System.Drawing.Size(225, 34);
             this.kullanıcıİsimTxt.TabIndex = 1;
+            this.toolTip1.SetToolTip(this.kullanıcıİsimTxt, "LÜTFEN SİSTEM KAYITLI OLAN KULLANICI İSMİNİZİ GİRİNİZ");
             // 
             // label2
             // 
@@ -105,6 +110,7 @@ namespace AraçKiralamaOtomasyonu
             this.YetkiliTxt.Name = "YetkiliTxt";
             this.YetkiliTxt.Size = new System.Drawing.Size(225, 34);
             this.YetkiliTxt.TabIndex = 4;
+            this.toolTip1.SetToolTip(this.YetkiliTxt, "LÜTFEN SİSTEM KAYITLI OLAN ADMİN İSMİNİZİ GİRİNİZ");
             // 
             // AdminSifreLbl
             // 
@@ -138,6 +144,7 @@ namespace AraçKiralamaOtomasyonu
             this.YetkiliPswTxt.PasswordChar = '*';
             this.YetkiliPswTxt.Size = new System.Drawing.Size(225, 34);
             this.YetkiliPswTxt.TabIndex = 5;
+            this.toolTip1.SetToolTip(this.YetkiliPswTxt, "LÜTFEN SİSTEM KAYITLI OLAN ADMİN ŞİFRENİZİ GİRİNİZ");
             // 
             // CıkısBtn
             // 
@@ -160,6 +167,7 @@ namespace AraçKiralamaOtomasyonu
             this.KayıtBtn.Size = new System.Drawing.Size(148, 60);
             this.KayıtBtn.TabIndex = 8;
             this.KayıtBtn.Text = "KAYIT OL";
+            this.toolTip1.SetToolTip(this.KayıtBtn, "KAYITLI DEĞİLSENİZ LÜTFEN KAYIT OLUNUZ.");
             this.KayıtBtn.UseVisualStyleBackColor = false;
             this.KayıtBtn.Click += new System.EventHandler(this.KayıtBtn_Click);
             // 
@@ -239,6 +247,8 @@ namespace AraçKiralamaOtomasyonu
         private System.Windows.Forms.Button KayıtBtn;
         private System.Windows.Forms.Button GirisYapBtn;
         private System.Windows.Forms.Button GirisYap2;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.ToolTip toolTip2;
     }
 }
 

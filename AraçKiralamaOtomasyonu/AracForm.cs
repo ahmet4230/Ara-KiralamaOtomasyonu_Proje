@@ -34,11 +34,6 @@ namespace AraçKiralamaOtomasyonu
         static string conString = "Data Source=DESKTOP-7QT69QN;Initial Catalog = Arac_Kiralama_Final1; Integrated Security = True";
         SqlConnection baglanti = new SqlConnection(conString);
 
-        private void AracForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -81,25 +76,16 @@ namespace AraçKiralamaOtomasyonu
             string sorgu = "UPDATE Markalar set Marka_Ad= @Marka_Ad,Pazarlanan_Satış_Yer_Id=@Pazarlanan_Satış_Yer_Id,Model_Sayisi=@Model_Sayisi where Marka_Ad=@Marka_Ad  ";
             SqlCommand komut = new SqlCommand(sorgu, baglanti);
             komut.Parameters.AddWithValue("@Marka_Ad", MarkaİsimTxt.Text);
-            komut.Parameters.AddWithValue("@Pazarlanan_Satış_Yer_Id", PazarlananYerTxt.Text);
+            komut.Parameters.AddWithValue("@Pazarlanan_Satış_Yer_Id", comboBox1.Text);
             komut.Parameters.AddWithValue("@Model_Sayisi", ModelSayıTxt.Text);
             baglanti.Open();
             komut.ExecuteNonQuery();
             baglanti.Close();
             Kayıt_Getir();
             MessageBox.Show("Marka bilgisi Başarıyla Güncellenmiştir");
-            foreach (Control item in Controls) if (item is TextBox) item.Text = "";
+         
         }
 
-        private void AracBilgileri_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void PazarlananYerNoLbl_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void MarkaEkleBtn_Click(object sender, EventArgs e)
         {
@@ -113,7 +99,7 @@ namespace AraçKiralamaOtomasyonu
                 SqlCommand komut = new SqlCommand(kayit, baglanti);
 
                 komut.Parameters.AddWithValue("@Marka_Ad", MarkaİsimTxt.Text);
-                komut.Parameters.AddWithValue("@satış_yeri", PazarlananYerTxt.Text);
+                komut.Parameters.AddWithValue("@satış_yeri", comboBox1.Text);
                 komut.Parameters.AddWithValue("@model_sayısı", ModelSayıTxt.Text);
               
                 komut.ExecuteNonQuery();
@@ -127,14 +113,14 @@ namespace AraçKiralamaOtomasyonu
                 
 
             }
-            foreach (Control item in Controls) if (item is TextBox) item.Text = "";
+          
 
         }
 
         private void dataGridView1_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
             MarkaİsimTxt.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            PazarlananYerTxt.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            comboBox1.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
             ModelSayıTxt.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
 
             ModelTxt.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
@@ -143,14 +129,6 @@ namespace AraçKiralamaOtomasyonu
             PlakaTxt.Text = dataGridView1.CurrentRow.Cells[9].Value.ToString();
             GunlukFiyatTxt.Text = dataGridView1.CurrentRow.Cells[10].Value.ToString();
             HakkındaTxt.Text = dataGridView1.CurrentRow.Cells[11].Value.ToString();
-          
-           
-           
-            
-          
-            
-
-
 
         }
 
@@ -177,22 +155,8 @@ namespace AraçKiralamaOtomasyonu
             baglanti.Close();
             Kayıt_Getir();
             MessageBox.Show("Model bilgisi Başarıyla Güncellenmiştir");
-            foreach (Control item in Controls) if (item is TextBox) item.Text = "";
-        }
-
-
-        
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
             
         }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void button4_Click(object sender, EventArgs e)
         {
 
@@ -202,12 +166,14 @@ namespace AraçKiralamaOtomasyonu
             SqlCommand sil = new SqlCommand("delete from Modeller where Arac_Plaka='" + dataGridView1.CurrentRow.Cells[9].Value.ToString() + "'", baglanti);
             sil.ExecuteNonQuery();
             MessageBox.Show("ARAÇ Bilgisi Başarıyla Silinmiştir");
+
             baglanti.Close();
         }
 
         private void MarkaListele_Click(object sender, EventArgs e)
         {
             baglanti.Open();
+
             string data = "select * from markalar ";
             SqlCommand komut = new SqlCommand(data, baglanti);
 
@@ -222,7 +188,7 @@ namespace AraçKiralamaOtomasyonu
         private void dataGridView2_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
             MarkaİsimTxt.Text = dataGridView2.CurrentRow.Cells[1].Value.ToString();
-            PazarlananYerTxt.Text = dataGridView2.CurrentRow.Cells[2].Value.ToString();
+            comboBox1.Text = dataGridView2.CurrentRow.Cells[2].Value.ToString();
             ModelSayıTxt.Text = dataGridView2.CurrentRow.Cells[3].Value.ToString();
         }
     }
