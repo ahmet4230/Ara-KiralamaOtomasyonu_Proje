@@ -98,13 +98,13 @@ namespace AraçKiralamaOtomasyonu
             this.groupBox1.Size = new System.Drawing.Size(958, 451);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Kullanıcı Bilgileri";
+            this.groupBox1.Text = "Admin Bilgileri";
             // 
             // ListeleBtn
             // 
             this.ListeleBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.ListeleBtn.ForeColor = System.Drawing.Color.Black;
-            this.ListeleBtn.Location = new System.Drawing.Point(705, 141);
+            this.ListeleBtn.Location = new System.Drawing.Point(705, 139);
             this.ListeleBtn.Name = "ListeleBtn";
             this.ListeleBtn.Size = new System.Drawing.Size(215, 35);
             this.ListeleBtn.TabIndex = 15;
@@ -144,7 +144,7 @@ namespace AraçKiralamaOtomasyonu
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(705, 202);
+            this.button1.Location = new System.Drawing.Point(705, 199);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(215, 35);
             this.button1.TabIndex = 12;
@@ -156,7 +156,7 @@ namespace AraçKiralamaOtomasyonu
             // 
             this.KullanıcıSilBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.KullanıcıSilBtn.ForeColor = System.Drawing.Color.Black;
-            this.KullanıcıSilBtn.Location = new System.Drawing.Point(705, 80);
+            this.KullanıcıSilBtn.Location = new System.Drawing.Point(705, 79);
             this.KullanıcıSilBtn.Name = "KullanıcıSilBtn";
             this.KullanıcıSilBtn.Size = new System.Drawing.Size(215, 35);
             this.KullanıcıSilBtn.TabIndex = 11;
@@ -305,7 +305,7 @@ namespace AraçKiralamaOtomasyonu
             this.dataGridView1.Size = new System.Drawing.Size(958, 276);
             this.dataGridView1.TabIndex = 3;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            this.dataGridView1.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellEnter);
+            
             // 
             // KullanıcılarForm
             // 

@@ -44,6 +44,7 @@ namespace AraçKiralamaOtomasyonu
             this.TelefonMskbx = new System.Windows.Forms.MaskedTextBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.label2 = new System.Windows.Forms.Label();
+            this.TemizleBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,17 +52,18 @@ namespace AraçKiralamaOtomasyonu
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(22, 378);
+            this.dataGridView1.Location = new System.Drawing.Point(22, 397);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(492, 183);
+            this.dataGridView1.Size = new System.Drawing.Size(510, 183);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellEnter);
             // 
             // EkleBtn
             // 
             this.EkleBtn.BackColor = System.Drawing.Color.Chocolate;
-            this.EkleBtn.Location = new System.Drawing.Point(22, 296);
+            this.EkleBtn.Location = new System.Drawing.Point(40, 313);
             this.EkleBtn.Name = "EkleBtn";
             this.EkleBtn.Size = new System.Drawing.Size(75, 53);
             this.EkleBtn.TabIndex = 1;
@@ -72,27 +74,29 @@ namespace AraçKiralamaOtomasyonu
             // SilBtbn
             // 
             this.SilBtbn.BackColor = System.Drawing.Color.Chocolate;
-            this.SilBtbn.Location = new System.Drawing.Point(339, 296);
+            this.SilBtbn.Location = new System.Drawing.Point(357, 313);
             this.SilBtbn.Name = "SilBtbn";
             this.SilBtbn.Size = new System.Drawing.Size(94, 53);
             this.SilBtbn.TabIndex = 2;
             this.SilBtbn.Text = "SİL";
             this.SilBtbn.UseVisualStyleBackColor = false;
+            this.SilBtbn.Click += new System.EventHandler(this.SilBtbn_Click);
             // 
             // GuncelleBtn
             // 
             this.GuncelleBtn.BackColor = System.Drawing.Color.Chocolate;
-            this.GuncelleBtn.Location = new System.Drawing.Point(208, 296);
+            this.GuncelleBtn.Location = new System.Drawing.Point(226, 313);
             this.GuncelleBtn.Name = "GuncelleBtn";
             this.GuncelleBtn.Size = new System.Drawing.Size(125, 53);
             this.GuncelleBtn.TabIndex = 3;
             this.GuncelleBtn.Text = "GÜNCELLE";
             this.GuncelleBtn.UseVisualStyleBackColor = false;
+            this.GuncelleBtn.Click += new System.EventHandler(this.GuncelleBtn_Click);
             // 
             // ListeleBtn
             // 
             this.ListeleBtn.BackColor = System.Drawing.Color.Chocolate;
-            this.ListeleBtn.Location = new System.Drawing.Point(103, 296);
+            this.ListeleBtn.Location = new System.Drawing.Point(121, 313);
             this.ListeleBtn.Name = "ListeleBtn";
             this.ListeleBtn.Size = new System.Drawing.Size(99, 53);
             this.ListeleBtn.TabIndex = 4;
@@ -103,7 +107,7 @@ namespace AraçKiralamaOtomasyonu
             // GeriBtn
             // 
             this.GeriBtn.BackColor = System.Drawing.Color.Red;
-            this.GeriBtn.Location = new System.Drawing.Point(439, 296);
+            this.GeriBtn.Location = new System.Drawing.Point(457, 313);
             this.GeriBtn.Name = "GeriBtn";
             this.GeriBtn.Size = new System.Drawing.Size(75, 53);
             this.GeriBtn.TabIndex = 5;
@@ -117,7 +121,7 @@ namespace AraçKiralamaOtomasyonu
             this.AdresLbl.BackColor = System.Drawing.Color.Transparent;
             this.AdresLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.AdresLbl.ForeColor = System.Drawing.SystemColors.Control;
-            this.AdresLbl.Location = new System.Drawing.Point(62, 122);
+            this.AdresLbl.Location = new System.Drawing.Point(28, 122);
             this.AdresLbl.Name = "AdresLbl";
             this.AdresLbl.Size = new System.Drawing.Size(74, 24);
             this.AdresLbl.TabIndex = 7;
@@ -129,7 +133,7 @@ namespace AraçKiralamaOtomasyonu
             this.CalısanSayısıLbl.BackColor = System.Drawing.Color.Transparent;
             this.CalısanSayısıLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.CalısanSayısıLbl.ForeColor = System.Drawing.SystemColors.Control;
-            this.CalısanSayısıLbl.Location = new System.Drawing.Point(62, 234);
+            this.CalısanSayısıLbl.Location = new System.Drawing.Point(28, 234);
             this.CalısanSayısıLbl.Name = "CalısanSayısıLbl";
             this.CalısanSayısıLbl.Size = new System.Drawing.Size(163, 24);
             this.CalısanSayısıLbl.TabIndex = 8;
@@ -141,7 +145,7 @@ namespace AraçKiralamaOtomasyonu
             this.TelefonLbl.BackColor = System.Drawing.Color.Transparent;
             this.TelefonLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.TelefonLbl.ForeColor = System.Drawing.SystemColors.Control;
-            this.TelefonLbl.Location = new System.Drawing.Point(62, 178);
+            this.TelefonLbl.Location = new System.Drawing.Point(28, 178);
             this.TelefonLbl.Name = "TelefonLbl";
             this.TelefonLbl.Size = new System.Drawing.Size(99, 24);
             this.TelefonLbl.TabIndex = 9;
@@ -150,7 +154,7 @@ namespace AraçKiralamaOtomasyonu
             // CalısanSayısıTxt
             // 
             this.CalısanSayısıTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.CalısanSayısıTxt.Location = new System.Drawing.Point(306, 232);
+            this.CalısanSayısıTxt.Location = new System.Drawing.Point(272, 232);
             this.CalısanSayısıTxt.Name = "CalısanSayısıTxt";
             this.CalısanSayısıTxt.Size = new System.Drawing.Size(141, 28);
             this.CalısanSayısıTxt.TabIndex = 11;
@@ -158,7 +162,7 @@ namespace AraçKiralamaOtomasyonu
             // AdresTxt
             // 
             this.AdresTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.AdresTxt.Location = new System.Drawing.Point(306, 118);
+            this.AdresTxt.Location = new System.Drawing.Point(272, 118);
             this.AdresTxt.Name = "AdresTxt";
             this.AdresTxt.Size = new System.Drawing.Size(141, 28);
             this.AdresTxt.TabIndex = 13;
@@ -166,7 +170,7 @@ namespace AraçKiralamaOtomasyonu
             // TelefonMskbx
             // 
             this.TelefonMskbx.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.TelefonMskbx.Location = new System.Drawing.Point(306, 178);
+            this.TelefonMskbx.Location = new System.Drawing.Point(272, 178);
             this.TelefonMskbx.Mask = "(999) 000-0000";
             this.TelefonMskbx.Name = "TelefonMskbx";
             this.TelefonMskbx.Size = new System.Drawing.Size(141, 28);
@@ -184,6 +188,17 @@ namespace AraçKiralamaOtomasyonu
             this.label2.TabIndex = 17;
             this.label2.Text = "MERAM OTO KİRALAMA BAYİ BİLGİLERİ";
             // 
+            // TemizleBtn
+            // 
+            this.TemizleBtn.BackColor = System.Drawing.Color.Chocolate;
+            this.TemizleBtn.Location = new System.Drawing.Point(448, 164);
+            this.TemizleBtn.Name = "TemizleBtn";
+            this.TemizleBtn.Size = new System.Drawing.Size(84, 61);
+            this.TemizleBtn.TabIndex = 18;
+            this.TemizleBtn.Text = "TEMİZLE";
+            this.TemizleBtn.UseVisualStyleBackColor = false;
+            this.TemizleBtn.Click += new System.EventHandler(this.TemizleBtn_Click);
+            // 
             // FirmaBilgileri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -191,6 +206,7 @@ namespace AraçKiralamaOtomasyonu
             this.BackgroundImage = global::AraçKiralamaOtomasyonu.Properties.Resources.images;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(565, 592);
+            this.Controls.Add(this.TemizleBtn);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.TelefonMskbx);
             this.Controls.Add(this.AdresTxt);
@@ -232,5 +248,6 @@ namespace AraçKiralamaOtomasyonu
         private System.Windows.Forms.MaskedTextBox TelefonMskbx;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button TemizleBtn;
     }
 }

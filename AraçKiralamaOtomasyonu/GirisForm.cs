@@ -53,8 +53,7 @@ namespace AraçKiralamaOtomasyonu
 
         private void GirisYapBtn_Click(object sender, EventArgs e)
         {
-            string user = kullanıcıİsimTxt.Text;
-            string psw = kullanıcıŞifreTxt.Text;
+            
             con = new SqlConnection ("Data Source=DESKTOP-7QT69QN;Initial Catalog=Arac_Kiralama_Final1;Integrated Security=True");
             com = new SqlCommand();
             con.Open();

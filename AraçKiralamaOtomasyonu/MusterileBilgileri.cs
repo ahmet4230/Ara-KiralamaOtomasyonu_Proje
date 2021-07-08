@@ -109,15 +109,12 @@ namespace AraçKiralamaOtomasyonu
            
                 string conString = "Data Source=DESKTOP-7QT69QN;Initial Catalog = Arac_Kiralama_Final1; Integrated Security = True";
                 SqlConnection con = new SqlConnection(conString);
+
                 con.Open();
 
                 SqlCommand sil = new SqlCommand("delete from Musteriler where Musteri_ID='" + dataGridView1.CurrentRow.Cells[0].Value.ToString() + "'", con);
                 sil.ExecuteNonQuery();
                 MessageBox.Show("Müşteri Başarıyla Silinmiştir");
-
-                 
-
-
 
             
         }

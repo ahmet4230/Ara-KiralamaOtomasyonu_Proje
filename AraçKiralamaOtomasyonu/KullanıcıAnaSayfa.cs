@@ -56,6 +56,18 @@ namespace AraçKiralamaOtomasyonu
         {
             MessageBox.Show("Detaylı Bilgi İçin Lütfen İletişime Geçiniz\n011122214\nMERAM OTO KİRALAMA");
         }
+
+        private void AracKiralaBtn_Click(object sender, EventArgs e)
+        {
+            Form SozlesmeYap = new Sözleşme_Yap();
+            SozlesmeYap.ShowDialog();
+        }
+
+        private void AraclarBtn1_Click(object sender, EventArgs e)
+        {
+            Form AracListe = new AracListe();
+            AracListe.ShowDialog();
+        }
     }
 
     }

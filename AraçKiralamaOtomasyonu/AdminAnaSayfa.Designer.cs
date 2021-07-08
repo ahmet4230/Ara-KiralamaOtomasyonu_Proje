@@ -51,7 +51,7 @@ namespace AraçKiralamaOtomasyonu
             this.AraclarBtn1.ImageList = this.ımageList1;
             this.AraclarBtn1.Location = new System.Drawing.Point(242, 12);
             this.AraclarBtn1.Name = "AraclarBtn1";
-            this.AraclarBtn1.Size = new System.Drawing.Size(211, 149);
+            this.AraclarBtn1.Size = new System.Drawing.Size(211, 166);
             this.AraclarBtn1.TabIndex = 0;
             this.AraclarBtn1.Text = "ARAÇ VE ARAÇ BİLGİLERİ DÜZENLEME";
             this.AraclarBtn1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -85,7 +85,7 @@ namespace AraçKiralamaOtomasyonu
             this.KullanıcılarBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.KullanıcılarBtn.ImageIndex = 8;
             this.KullanıcılarBtn.ImageList = this.ımageList1;
-            this.KullanıcılarBtn.Location = new System.Drawing.Point(12, 50);
+            this.KullanıcılarBtn.Location = new System.Drawing.Point(12, 112);
             this.KullanıcılarBtn.Name = "KullanıcılarBtn";
             this.KullanıcılarBtn.Size = new System.Drawing.Size(191, 229);
             this.KullanıcılarBtn.TabIndex = 0;
@@ -104,7 +104,7 @@ namespace AraçKiralamaOtomasyonu
             this.MusterılerBtn.ImageList = this.ımageList1;
             this.MusterılerBtn.Location = new System.Drawing.Point(500, 12);
             this.MusterılerBtn.Name = "MusterılerBtn";
-            this.MusterılerBtn.Size = new System.Drawing.Size(211, 149);
+            this.MusterılerBtn.Size = new System.Drawing.Size(211, 166);
             this.MusterılerBtn.TabIndex = 0;
             this.MusterılerBtn.Text = "MÜŞTERİLER";
             this.MusterılerBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -120,9 +120,9 @@ namespace AraçKiralamaOtomasyonu
             this.CıkısBtn.ForeColor = System.Drawing.Color.Transparent;
             this.CıkısBtn.ImageIndex = 7;
             this.CıkısBtn.ImageList = this.ımageList1;
-            this.CıkısBtn.Location = new System.Drawing.Point(782, 50);
+            this.CıkısBtn.Location = new System.Drawing.Point(769, 112);
             this.CıkısBtn.Name = "CıkısBtn";
-            this.CıkısBtn.Size = new System.Drawing.Size(161, 229);
+            this.CıkısBtn.Size = new System.Drawing.Size(191, 229);
             this.CıkısBtn.TabIndex = 1;
             this.CıkısBtn.Text = "ÇIKIŞ";
             this.CıkısBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -137,9 +137,9 @@ namespace AraçKiralamaOtomasyonu
             this.MusteriEklemeBtn.ForeColor = System.Drawing.Color.White;
             this.MusteriEklemeBtn.ImageIndex = 10;
             this.MusteriEklemeBtn.ImageList = this.ımageList1;
-            this.MusteriEklemeBtn.Location = new System.Drawing.Point(500, 245);
+            this.MusteriEklemeBtn.Location = new System.Drawing.Point(500, 342);
             this.MusteriEklemeBtn.Name = "MusteriEklemeBtn";
-            this.MusteriEklemeBtn.Size = new System.Drawing.Size(211, 157);
+            this.MusteriEklemeBtn.Size = new System.Drawing.Size(211, 166);
             this.MusteriEklemeBtn.TabIndex = 3;
             this.MusteriEklemeBtn.Text = "Müşteri Ekleme";
             this.MusteriEklemeBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -154,9 +154,9 @@ namespace AraçKiralamaOtomasyonu
             this.FirmaBilgileriBtn.ForeColor = System.Drawing.Color.Transparent;
             this.FirmaBilgileriBtn.ImageIndex = 12;
             this.FirmaBilgileriBtn.ImageList = this.ımageList1;
-            this.FirmaBilgileriBtn.Location = new System.Drawing.Point(242, 253);
+            this.FirmaBilgileriBtn.Location = new System.Drawing.Point(242, 342);
             this.FirmaBilgileriBtn.Name = "FirmaBilgileriBtn";
-            this.FirmaBilgileriBtn.Size = new System.Drawing.Size(211, 149);
+            this.FirmaBilgileriBtn.Size = new System.Drawing.Size(211, 166);
             this.FirmaBilgileriBtn.TabIndex = 4;
             this.FirmaBilgileriBtn.Text = "FİRMA BİLGİLERİ";
             this.FirmaBilgileriBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -171,7 +171,7 @@ namespace AraçKiralamaOtomasyonu
             this.BackColor = System.Drawing.Color.DimGray;
             this.BackgroundImage = global::AraçKiralamaOtomasyonu.Properties.Resources.pexels_photo_1685111;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(982, 542);
+            this.ClientSize = new System.Drawing.Size(982, 561);
             this.Controls.Add(this.FirmaBilgileriBtn);
             this.Controls.Add(this.MusteriEklemeBtn);
             this.Controls.Add(this.CıkısBtn);
@@ -179,7 +179,9 @@ namespace AraçKiralamaOtomasyonu
             this.Controls.Add(this.KullanıcılarBtn);
             this.Controls.Add(this.AraclarBtn1);
             this.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.MaximumSize = new System.Drawing.Size(1000, 608);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(1000, 608);
             this.Name = "AdminAnaSayfa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ana Sayfa";

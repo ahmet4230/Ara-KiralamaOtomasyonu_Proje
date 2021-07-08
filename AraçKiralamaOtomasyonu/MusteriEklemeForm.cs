@@ -73,6 +73,7 @@ namespace AraçKiralamaOtomasyonu
             {
                 MessageBox.Show("İşlem Sırasında Hata Oluştu." + hata.Message);
             }
+            
             foreach (Control item in Controls) if (item is TextBox) item.Text = "";
             foreach (Control item in Controls) if (item is ComboBox) item.Text = "";
             foreach (Control item in Controls) if (item is MaskedTextBox) item.Text = "";

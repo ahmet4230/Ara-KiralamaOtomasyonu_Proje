@@ -44,6 +44,7 @@ namespace AraçKiralamaOtomasyonu
             this.AracSilLbl = new System.Windows.Forms.Button();
             this.GunlukFiyatTxt = new System.Windows.Forms.TextBox();
             this.AracBilgileri = new System.Windows.Forms.GroupBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.MarkaListele = new System.Windows.Forms.Button();
             this.ModelSayısıLbl = new System.Windows.Forms.Label();
@@ -66,7 +67,7 @@ namespace AraçKiralamaOtomasyonu
             this.button1 = new System.Windows.Forms.Button();
             this.MarkaBilgileriGuncelleBtn = new System.Windows.Forms.Button();
             this.MarkaLbl = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.tmzleBtn = new System.Windows.Forms.Button();
             this.AracBilgileri.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -207,6 +208,7 @@ namespace AraçKiralamaOtomasyonu
             // AracBilgileri
             // 
             this.AracBilgileri.BackColor = System.Drawing.Color.Transparent;
+            this.AracBilgileri.Controls.Add(this.tmzleBtn);
             this.AracBilgileri.Controls.Add(this.comboBox1);
             this.AracBilgileri.Controls.Add(this.dataGridView2);
             this.AracBilgileri.Controls.Add(this.MarkaListele);
@@ -251,6 +253,18 @@ namespace AraçKiralamaOtomasyonu
             this.AracBilgileri.TabIndex = 3;
             this.AracBilgileri.TabStop = false;
             this.AracBilgileri.Text = "Araç Bilgileri";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3"});
+            this.comboBox1.Location = new System.Drawing.Point(188, 116);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(155, 33);
+            this.comboBox1.TabIndex = 44;
             // 
             // dataGridView2
             // 
@@ -496,17 +510,17 @@ namespace AraçKiralamaOtomasyonu
             this.MarkaLbl.TabIndex = 1;
             this.MarkaLbl.Text = "MARKA İSMİ";
             // 
-            // comboBox1
+            // tmzleBtn
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3"});
-            this.comboBox1.Location = new System.Drawing.Point(188, 116);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(155, 33);
-            this.comboBox1.TabIndex = 44;
+            this.tmzleBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.tmzleBtn.ForeColor = System.Drawing.Color.Black;
+            this.tmzleBtn.Location = new System.Drawing.Point(249, 404);
+            this.tmzleBtn.Name = "tmzleBtn";
+            this.tmzleBtn.Size = new System.Drawing.Size(137, 66);
+            this.tmzleBtn.TabIndex = 45;
+            this.tmzleBtn.Text = "TEMİZLE";
+            this.tmzleBtn.UseVisualStyleBackColor = false;
+            this.tmzleBtn.Click += new System.EventHandler(this.tmzleBtn_Click);
             // 
             // AracForm
             // 
@@ -570,5 +584,6 @@ namespace AraçKiralamaOtomasyonu
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Button MarkaBilgileriGuncelleBtn;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button tmzleBtn;
     }
 }

@@ -31,6 +31,7 @@ namespace AraçKiralamaOtomasyonu
             baglanti.Close();
 
         }
+       
         static string conString = "Data Source=DESKTOP-7QT69QN;Initial Catalog = Arac_Kiralama_Final1; Integrated Security = True";
         SqlConnection baglanti = new SqlConnection(conString);
 
@@ -190,6 +191,21 @@ namespace AraçKiralamaOtomasyonu
             MarkaİsimTxt.Text = dataGridView2.CurrentRow.Cells[1].Value.ToString();
             comboBox1.Text = dataGridView2.CurrentRow.Cells[2].Value.ToString();
             ModelSayıTxt.Text = dataGridView2.CurrentRow.Cells[3].Value.ToString();
+        }
+
+        private void tmzleBtn_Click(object sender, EventArgs e)
+        {
+            MarkaİsimTxt.Clear();
+            comboBox1.ResetText();           
+            ModelTxt.Clear();
+            MarkalNotxt.Clear();
+            PlakaTxt.Clear();
+            RenkTxt.Clear();
+            GunlukFiyatTxt.Clear();
+            HakkındaTxt.Clear();
+            ModelYılıTxt.Clear();
+            ModelSayıTxt.Clear();
+
         }
     }
 

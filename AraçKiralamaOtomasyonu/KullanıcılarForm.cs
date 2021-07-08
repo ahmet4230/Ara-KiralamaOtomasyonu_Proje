@@ -70,7 +70,7 @@ namespace AraçKiralamaOtomasyonu
         private void ListeleBtn_Click(object sender, EventArgs e)
         {
             baglanti.Open();
-            string data = "select * from Personel";
+            string data = "select Yetkili_Ad , Yetkili_Soyad from Personel";
             SqlCommand komut = new SqlCommand(data, baglanti);
 
             SqlDataAdapter ad = new SqlDataAdapter(komut);
@@ -81,22 +81,9 @@ namespace AraçKiralamaOtomasyonu
             baglanti.Close();
         }
 
-        private void TemizleBtn_Click(object sender, EventArgs e)
-        {
-            foreach (Control item in Controls) if (item is TextBox) item.Text = "";
-        }
+        
 
-        private void dataGridView1_CellEnter(object sender, DataGridViewCellEventArgs e)
-        {
-            TcTxt1.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            KullanıcıİsimTxt.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-            KullanıcıSoyisimTxt.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
-            KullanıcıSifreTxt.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
-            dateTimePicker1.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
-            maskedTextBox1.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
-            KMail.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
-            HakkındaTxt.Text = dataGridView1.CurrentRow.Cells[8].Value.ToString();
-        }
+        
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -113,5 +100,7 @@ namespace AraçKiralamaOtomasyonu
             MessageBox.Show("Personel Başarıyla Silinmiştir" + " " + KullanıcıİsimTxt.Text);
             baglanti.Close();
         }
+
+      
     }
 }

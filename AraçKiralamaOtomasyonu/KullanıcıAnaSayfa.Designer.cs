@@ -55,6 +55,7 @@ namespace AraçKiralamaOtomasyonu
             this.AraclarBtn1.Text = "ARAÇLAR";
             this.AraclarBtn1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.AraclarBtn1.UseVisualStyleBackColor = false;
+            this.AraclarBtn1.Click += new System.EventHandler(this.AraclarBtn1_Click);
             this.AraclarBtn1.MouseLeave += new System.EventHandler(this.AraclarBtn1_MouseLeave);
             this.AraclarBtn1.MouseHover += new System.EventHandler(this.AraclarBtn1_MouseHover);
             // 
@@ -84,6 +85,7 @@ namespace AraçKiralamaOtomasyonu
             this.AracKiralaBtn.Text = "ARAÇ KİRALA";
             this.AracKiralaBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.AracKiralaBtn.UseVisualStyleBackColor = false;
+            this.AracKiralaBtn.Click += new System.EventHandler(this.AracKiralaBtn_Click);
             this.AracKiralaBtn.MouseLeave += new System.EventHandler(this.AracKiralaBtn_MouseLeave);
             this.AracKiralaBtn.MouseHover += new System.EventHandler(this.AracKiralaBtn_MouseHover);
             // 

@@ -25,32 +25,46 @@ namespace AraçKiralamaOtomasyonu
 
         private void EkleBtn_Click(object sender, EventArgs e)
         {
-            string conString = "Data Source=DESKTOP-7QT69QN;Initial Catalog = Arac_Kiralama_Final1; Integrated Security = True";
-            SqlConnection baglanti = new SqlConnection(conString);
-
-            try
+            if (KullanıcıİsimTxt.Text == "" || KullanıcıSifreTxt.Text == "") 
             {
-                if (baglanti.State == ConnectionState.Closed)
-                    baglanti.Open();
-
-                string kayit = "insert into Kullanıcı (Kullanıcı_Ad,Kullanıcı_Sifre)values(@Kullanıcıİsim,@KullanıcıSifre)";
-                SqlCommand komut = new SqlCommand(kayit, baglanti);
-
-                komut.Parameters.AddWithValue("@Kullanıcıİsim", KullanıcıİsimTxt1.Text);
-                komut.Parameters.AddWithValue("@KullanıcıSifre", KullanıcıSifreTxt.Text);
-             
-                komut.ExecuteNonQuery();
-
-                baglanti.Close();
-                MessageBox.Show("KAYIT BAŞARILI");
+                MessageBox.Show("Lütfen gerekli alanları doldurunuz");
             }
-            catch (Exception hata)
+            else
             {
-                MessageBox.Show("KAYIT EKLEME İŞLEMİ SIRASINDA HATA OLUŞTU" + hata.Message);
-            }
-            foreach (Control item in Controls) if (item is TextBox) item.Text = "";
+                string conString = "Data Source=DESKTOP-7QT69QN;Initial Catalog = Arac_Kiralama_Final1; Integrated Security = True";
+                SqlConnection baglanti = new SqlConnection(conString);
 
+
+                try
+                {
+
+
+                    if (baglanti.State == ConnectionState.Closed)
+                        baglanti.Open();
+
+                    string kayit = "insert into Kullanıcı (Kullanıcı_Ad,Kullanıcı_Sifre)values(@Kullanıcıİsim,@KullanıcıSifre)";
+                    SqlCommand komut = new SqlCommand(kayit, baglanti);
+
+                    komut.Parameters.AddWithValue("@Kullanıcıİsim", KullanıcıİsimTxt1.Text);
+                    komut.Parameters.AddWithValue("@KullanıcıSifre", KullanıcıSifreTxt.Text);
+
+                    komut.ExecuteNonQuery();
+
+                    baglanti.Close();
+                    MessageBox.Show("KAYIT BAŞARILI");
+                }
+                catch (Exception hata)
+                {
+                    MessageBox.Show("KAYIT EKLEME İŞLEMİ SIRASINDA HATA OLUŞTU" + hata.Message);
+                }
+                foreach (Control item in Controls) if (item is TextBox) item.Text = "";
+
+            }
         }
+            
+            
+
+            
 
         private void EkleBtn_MouseHover(object sender, EventArgs e)
         {
